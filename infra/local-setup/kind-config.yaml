@@ -1,6 +1,8 @@
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 name: msa-local
+# Kubernetes 1.32 사용 (Rancher 호환성을 위해)
+image: kindest/node:v1.32.0
 nodes:
 - role: control-plane
   kubeadmConfigPatches:
